@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor.Presets;
 using UnityEngine;
 
 [System.Serializable]
@@ -44,7 +45,7 @@ public class ParallaxEffect : MonoBehaviour
 {
     public List<ParallaxLayer> parallaxLayers;
 
-    private void Awake()
+    private void Start()
     {
         foreach (ParallaxLayer layer in parallaxLayers)
         {
@@ -52,7 +53,7 @@ public class ParallaxEffect : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    private void LateUpdate()
     {
         foreach (ParallaxLayer layer in parallaxLayers)
         {

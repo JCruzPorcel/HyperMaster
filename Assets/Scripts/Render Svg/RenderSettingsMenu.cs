@@ -1,16 +1,15 @@
 using System.IO;
-using UnityEditor;
 using UnityEngine;
 
 public class RenderSettingsMenu : MonoBehaviour
 {
     // Variables para los parámetros de renderizado
-    [SerializeField] private bool enableClipping = true;
-    [SerializeField] private Color gradingColor = Color.white;
+    [SerializeField] private bool enableClipping = false;
     [SerializeField] private string svgFileName = "example";
 
     private ParallaxEffect parallaxEffect;
     private SpriteSvgScript spriteSvgScript;
+    [SerializeField] private GameObject clippingGo;
 
     private void Start()
     {
@@ -35,8 +34,7 @@ public class RenderSettingsMenu : MonoBehaviour
 
         enableClipping = GUILayout.Toggle(enableClipping, "Enable Clipping");
 
-        GUILayout.Label("Grading Color:");
-        gradingColor = EditorGUILayout.ColorField(gradingColor);
+        clippingGo.SetActive(enableClipping);
 
         GUILayout.Label("SVG File Name:");
         svgFileName = GUILayout.TextField(svgFileName);
