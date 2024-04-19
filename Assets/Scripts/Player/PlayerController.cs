@@ -1,26 +1,46 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using Unity.VectorGraphics;
-using System.IO;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;
-    private Vector2 direction;
+    [SerializeField] private InputAction moveAction;
+    public InputAction lookAction;
+    private Transform cameraTransform;
 
-public void GetDirection(InputAction.CallbackContext ctx)
+    [SerializeField] private float moveSpeed = 5f;
+
+    private void OnEnable()
     {
-        direction = new Vector2(ctx.ReadValue<Vector2>().x, 0f);
+        moveAction.Enable();
+        lookAction.Enable();
     }
 
-    private void OnMove()
+    private void OnDisable()
     {
-        Vector2 movement = direction * speed * Time.fixedDeltaTime;
-        transform.position += (Vector3)movement;
+        moveAction.Disable();
+        lookAction.Disable();
     }
 
-    private void FixedUpdate()
+    private void Start()
     {
-        OnMove();
+        Cursor.lockState = CursorLockMode.Locked;
+        cameraTransform = Camera.main.transform;
+    }
+
+    private void Update()
+    {
+        Vector2 movementInput = moveAction.ReadValue<Vector2>();
+
+        Vector3 move = new Vector3(movementInput.x, 0f, movementInput.y) * moveSpeed;
+
+        move = cameraTransform.forward * move.z + cameraTransform.right * move.x;
+        move.y = 0f;
+
+        transform.position += move * Time.deltaTime;
+    }
+
+    public Vector2 GetMouseDelta()
+    {
+        return lookAction.ReadValue<Vector2>();
     }
 }

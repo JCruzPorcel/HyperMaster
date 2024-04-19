@@ -15,10 +15,10 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Jump",
-                    "type": "Button",
-                    "id": "60aab7fe-78cb-43d7-8aa9-ab85ff93e89a",
-                    "expectedControlType": "Button",
+                    "name": "Look",
+                    "type": "PassThrough",
+                    "id": "8904d7b1-cdd1-4e0a-a34a-feefeb5c8db0",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -82,12 +82,12 @@
                 },
                 {
                     "name": "",
-                    "id": "2a8f6a01-573b-4cf4-b3b3-0cb7b18905b8",
-                    "path": "<Keyboard>/space",
+                    "id": "71c9b491-342a-4ecc-936d-37ff6b77626d",
+                    "path": "<Mouse>/delta",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Jump",
+                    "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
