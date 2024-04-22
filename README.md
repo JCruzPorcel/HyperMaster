@@ -9,15 +9,15 @@
 ### Color Grading Correction:
 - Se ha integrado una corrección de color en tiempo real para mejorar la estética visual del juego, ajustando los tonos y la saturación para lograr efectos deseados.
 ### SVG Rendering desde archivos en disco:
-**Se ha implementado la capacidad de renderizar gráficos SVG directamente desde archivos almacenados en disco, permitiendo una flexibilidad adicional en la creación de contenido visual. Para utilizar esta funcionalidad, sigue los siguientes pasos:**
-### **Colocar archivos SVG en la carpeta del proyecto:**
-- Asegúrate de colocar los archivos SVG que deseas renderizar en la carpeta específica del proyecto en **..\Assets\Art\Svg.**
-### 1. Implementación del Script:
-   - Se ha creado un script que busca archivos SVG en la carpeta mencionada, los convierte a formato XML, los lee y luego los utiliza como SVG. Asegúrate de que este script esté correctamente integrado en tu proyecto y configurado para ejecutarse adecuadamente.
-###  2. Uso en el juego:
-  - Una vez que el script esté funcionando correctamente, puedes utilizar los gráficos SVG en tu juego como cualquier otro recurso. Puedes cargarlos dinámicamente en las escenas según sea necesario para crear elementos visuales.
-  - Con esta implementación, tendrás la capacidad de aprovechar la versatilidad y escalabilidad de los gráficos SVG en tu proyecto, lo que facilitará la creación y modificación de contenido visual de manera eficiente.
-
+- **Se ha implementado la capacidad de renderizar gráficos SVG directamente desde archivos almacenados en disco, permitiendo una flexibilidad adicional en la creación de contenido visual. Para utilizar esta funcionalidad, sigue los siguientes pasos:**
+   ### **Colocar archivos SVG en la carpeta del proyecto:**
+  - Asegúrate de colocar los archivos SVG que deseas renderizar en la carpeta específica del proyecto en _**..\Assets\Art\Svg**_.
+   ### 1. Implementación del Script:
+    - Se ha creado un script que busca archivos SVG en la carpeta mencionada, los convierte a formato XML, los lee y luego los utiliza como SVG. Asegúrate de que este script esté correctamente integrado en tu proyecto y configurado para ejecutarse adecuadamente.
+   ### 2. Uso en el juego:
+    - Una vez que el script esté funcionando correctamente, puedes utilizar los gráficos SVG en tu juego como cualquier otro recurso. Puedes cargarlos dinámicamente en las escenas según sea necesario para crear elementos visuales.
+    - Con esta implementación, tendrás la capacidad de aprovechar la versatilidad y escalabilidad de los gráficos SVG en tu proyecto, lo que facilitará la creación y modificación de contenido visual de manera eficiente.
+ 
 ## Prototipos 3D:
 ### Environment Mapping (Cubemaps):
 - Se ha añadido mapeado de entorno para generar reflexiones realistas en objetos 3D, utilizando cubemaps para capturar y proyectar el entorno circundante.
@@ -39,5 +39,7 @@
 - Se ha añadido mapeado de sombras con varianza para mejorar la calidad y suavidad de las sombras proyectadas en la escena.
 ### Nomenclatura Utilizada:
 - Se ha adoptado una convención de nomenclatura coherente para mejorar la legibilidad y comprensión del código fuente, facilitando el mantenimiento y la colaboración en el proyecto.
+  
+### Objetivos secundarios adicionales:
 - Se ha implementado un menu contextual con parametros de renderizado.
 - Se ha implementado el poder exportar a web.
