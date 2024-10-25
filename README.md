@@ -1,45 +1,70 @@
-# **Proyecto Completo #203**
-## Se ha completado el objetivo principal y los objetivos secundarios adicionales:
+# **Complete Project #203** 
 
-## Prototipos 2D:
-### Camera Parallax:
-- Se ha implementado una pantalla con efecto de parallax en la cámara, creando la ilusión de profundidad al moverse los objetos a diferentes velocidades en el plano de fondo y el plano frontal.
-### Clipping:
-- Se ha implementado una técnica de clipping para mostrar solo partes específicas de los objetos, permitiendo crear efectos visuales como recortes o enmascaramientos.
-### Color Grading Correction:
-- Se ha integrado una corrección de color en tiempo real para mejorar la estética visual del juego, ajustando los tonos y la saturación para lograr efectos deseados.
-### SVG Rendering desde archivos en disco:
-- **Se ha implementado la capacidad de renderizar gráficos SVG directamente desde archivos almacenados en disco, permitiendo una flexibilidad adicional en la creación de contenido visual. Para utilizar esta funcionalidad, sigue los siguientes pasos:**
-   ### **Colocar archivos SVG en la carpeta del proyecto:**
-  - Asegúrate de colocar los archivos SVG que deseas renderizar en la carpeta específica del proyecto en _**..\Assets\Art\Svg**_.
-   ### 1. Implementación del Script:
-    - Se ha creado un script que busca archivos SVG en la carpeta mencionada, los convierte a formato XML, los lee y luego los utiliza como SVG. Asegúrate de que este script esté correctamente integrado en tu proyecto y configurado para ejecutarse adecuadamente.
-   ### 2. Uso en el juego:
-    - Una vez que el script esté funcionando correctamente, puedes utilizar los gráficos SVG en tu juego como cualquier otro recurso. Puedes cargarlos dinámicamente en las escenas según sea necesario para crear elementos visuales.
-    - Con esta implementación, tendrás la capacidad de aprovechar la versatilidad y escalabilidad de los gráficos SVG en tu proyecto, lo que facilitará la creación y modificación de contenido visual de manera eficiente.
- 
-## Prototipos 3D:
-### Environment Mapping (Cubemaps):
-- Se ha añadido mapeado de entorno para generar reflexiones realistas en objetos 3D, utilizando cubemaps para capturar y proyectar el entorno circundante.
-### Iluminación de Textura Configurable:
-- Se ha creado un shader configurable en tiempo de ejecución que combina iluminación difusa y ambiental, así como reflexiones para mejorar la apariencia de los objetos 3D.
-### Phong Reflection:
-- Se ha implementado el modelo de reflexión de Phong para simular el comportamiento de la luz en superficies reflectantes.
-### Motion Blur:
-- Se ha añadido un efecto de desenfoque de movimiento para simular la persistencia de la visión en objetos en movimiento rápido, aumentando la sensación de velocidad y fluidez en la escena.
-### Transparent Shaders:
-- Se han creado shaders transparentes para objetos que requieren transparencia, como vidrios o elementos de interfaz, permitiendo ver a través de ellos.
-### G Buffer Depth + Albedo para Deferred rendering:
-- Se ha implementado un buffer G que almacena información de profundidad y albedo para utilizar en el proceso de rendering diferido, permitiendo una iluminación más avanzada y realista en la escena.
-### Screen Space Emisive Materials:
-- Se ha agregado un material emissive en el espacio de pantalla, lo que permite que ciertos objetos emitan luz propia.
-### Signed Distance Field Rendering:
-- Se ha implementado el renderizado basado en campos de distancia firmados para mejorar la calidad de los bordes y detalles de los objetos, así como para generar efectos de sombreado suave y ambiental.
-### Variance Shadow Mapping:
-- Se ha añadido mapeado de sombras con varianza para mejorar la calidad y suavidad de las sombras proyectadas en la escena.
-### Nomenclatura Utilizada:
-- Se ha adoptado una convención de nomenclatura coherente para mejorar la legibilidad y comprensión del código fuente, facilitando el mantenimiento y la colaboración en el proyecto.
+## 🎯 Completed Objectives
+- **Main Objective:** ✔️ Completed
+- **Additional Secondary Objectives:** ✔️ Completed
+
+---
+
+## 📦 2D Prototypes
+### 🌌 Camera Parallax
+- A parallax effect has been implemented in the camera, creating the illusion of depth by moving objects at different speeds in the background and foreground layers.
+
+### ✂️ Clipping
+- A clipping technique has been implemented to display only specific parts of objects, allowing for visual effects such as cutouts or masking.
+
+### 🎨 Color Grading Correction
+- Real-time color correction has been integrated to enhance the visual aesthetics of the game, adjusting tones and saturation to achieve desired effects.
+
+### 📄 SVG Rendering from Disk Files
+- **The ability to render SVG graphics directly from files stored on disk has been implemented, allowing for additional flexibility in creating visual content. To use this functionality, follow these steps:**
   
-### Objetivos secundarios adicionales:
-- Se ha implementado un menu contextual con parametros de renderizado.
-- Se ha implementado el poder exportar a web.
+  #### **1. Place SVG Files**
+  - Make sure to place the SVG files you want to render in the project's specific folder at `..\Assets\Art\Svg`.
+
+  #### **2. Script Implementation**
+  - A script has been created that searches for SVG files in the mentioned folder, converts them to XML format, reads them, and then uses them as SVG. Ensure this script is properly integrated into your project and configured to run correctly.
+
+  #### **3. Usage in the Game**
+  - Once the script is functioning correctly, you can use SVG graphics in your game like any other resource. You can dynamically load them into scenes as needed to create visual elements.
+
+  - With this implementation, you will have the ability to leverage the versatility and scalability of SVG graphics in your project, making it easier to create and modify visual content efficiently.
+
+---
+
+## 🌍 3D Prototypes
+### 🗺️ Environment Mapping (Cubemaps)
+- Environment mapping has been added to generate realistic reflections on 3D objects, using cubemaps to capture and project the surrounding environment.
+
+### 💡 Configurable Texture Lighting
+- A configurable shader has been created at runtime that combines diffuse and ambient lighting, as well as reflections, to enhance the appearance of 3D objects.
+
+### ✨ Phong Reflection
+- The Phong reflection model has been implemented to simulate the behavior of light on reflective surfaces.
+
+### 💨 Motion Blur
+- A motion blur effect has been added to simulate motion blur on fast-moving objects, increasing the sense of speed and fluidity in the scene.
+
+### 🔮 Transparent Shaders
+- Transparent shaders have been created for objects requiring transparency, such as glass or UI elements, allowing for visibility through them.
+
+### 🖼️ G Buffer Depth + Albedo for Deferred Rendering
+- A G buffer that stores depth and albedo information has been implemented for use in deferred rendering, allowing for more advanced and realistic lighting in the scene.
+
+### 🌟 Screen Space Emissive Materials
+- An emissive material in screen space has been added, allowing certain objects to emit their own light.
+
+### 📏 Signed Distance Field Rendering
+- Signed distance field rendering has been implemented to improve the quality of edges and details of objects, as well as to generate smooth and ambient shading effects.
+
+### 🌑 Variance Shadow Mapping
+- Variance shadow mapping has been added to enhance the quality and softness of shadows cast in the scene.
+
+### 🔠 Naming Conventions Used
+- A consistent naming convention has been adopted to improve the readability and understanding of the source code, facilitating maintenance and collaboration in the project.
+
+---
+
+## 🎉 Additional Secondary Objectives
+- A contextual menu with rendering parameters has been implemented.
+- The ability to export to the web has been implemented.
